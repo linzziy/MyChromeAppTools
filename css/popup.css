@@ -1,0 +1,173 @@
+@charset "utf-8";
+* {
+	padding: 0;
+	margin: 0;
+	border: 0 none;
+}
+
+body {
+	border:0px;overflow:hidden;background-color:#E7EBF4; 
+    margin: 0;
+	font: 13px/1.5 Helvetica, Tahoma, Arial, "微软雅黑", "宋体", sans-serif;
+	color: #333333;
+}
+
+.main {margin-top:5px; text-align:center;overflow:hidden; width:766px;}
+
+/* 功能列表 */
+.apps-br {
+	border-width: 2px 0;
+	border-style: solid;
+	border-color: rgb(233, 237, 244);
+	height: 1px; line-height:1px; font-size:1px;
+	background-color: rgb(186, 199, 219);
+	clear: both;
+	margin-top: -3px;
+}
+
+/* 列表样式 */
+.list {
+	display:block;
+	width:84px; height:30px; float:left; line-height:30px;
+
+	position: relative;
+	margin:2px;
+	text-align: center;
+	text-decoration: none;
+	font: bold 12px/25px Arial, sans-serif;
+	cursor:pointer;
+}
+
+.code{
+	font-family:"Courier New",Courier,monospace;
+	height:201px; clear:both; border:1px #000 solid; border:1px #BAC6DB solid; text-align:left; background-color:#EFEFEF;
+	overflow:auto; padding:2px;
+}
+
+textarea{width:562px; height:200px; color:#333333;font-size:14px; padding:0px; margin:0px;}
+
+#inSize, #outSize, #pctSize {
+	width:10%;
+	font-weight:normal;
+}
+
+/*右边导航栏*/
+div.right {
+	float: left;
+	width: 183px;
+	text-align: left;
+	margin-left:3px;
+}
+
+DIV.ranks {
+	border: 1px solid rgb(186, 198, 219);
+	overflow: hidden;
+	background-color: #F6F7FB;
+}
+
+DIV.ranks h3 {
+	height:36px; line-height:36px; padding-left:5px; font-size:15px; text-align: center;
+}
+
+DIV.ranks DIV.app-rank {
+	margin:2px;
+	vertical-align: middle;
+	overflow: hidden;
+}
+
+/*DIV.ranks DIV.app-rank-child{background-color: rgb(222, 232, 245);}*/
+DIV.ranks DIV.app-rank A {
+	line-height: 25px;
+	margin-left: 2px;
+}
+
+/*滚动条*/
+.divsroll {left:0px;}
+
+.button:hover,.list:hover{color:rgb(222, 229, 231);}
+.button {
+	display: inline-block;
+	position: relative;
+	margin-right: 6px;
+	padding: 0 20px;
+	text-align: center;
+	text-decoration: none;
+	font: bold 12px/25px Arial, sans-serif;
+}
+
+.round {
+	text-shadow: 1px 1px 1px rgba(255,255,255, .22);
+
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+
+	-webkit-box-shadow: 1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);
+	-moz-box-shadow: 1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);
+	box-shadow: 1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);
+
+	-webkit-transition: all 0.15s ease;
+	-moz-transition: all 0.15s ease;
+	-o-transition: all 0.15s ease;
+	-ms-transition: all 0.15s ease;
+	transition: all 0.15s ease;
+}
+
+/* Green Color */
+.green {
+	color: #3e5706;
+
+	background: #a5cd4e; /* Old browsers */
+	background: -moz-linear-gradient(top,  #a5cd4e 0%, #6b8f1a 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a5cd4e), color-stop(100%,#6b8f1a)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #a5cd4e 0%,#6b8f1a 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #a5cd4e 0%,#6b8f1a 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #a5cd4e 0%,#6b8f1a 100%); /* IE10+ */
+	background: linear-gradient(top,  #a5cd4e 0%,#6b8f1a 100%); /* W3C */
+}
+
+/* Blue Color */
+.blue {
+	color: #19667d;
+
+	background: #70c9e3; /* Old browsers */
+	background: -moz-linear-gradient(top,  #70c9e3 0%, #39a0be 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#70c9e3), color-stop(100%,#39a0be)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #70c9e3 0%,#39a0be 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #70c9e3 0%,#39a0be 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #70c9e3 0%,#39a0be 100%); /* IE10+ */
+	background: linear-gradient(top,  #70c9e3 0%,#39a0be 100%); /* W3C */
+}
+
+/* Gray Color */
+.gray {
+	color: #515151;
+
+	background: #d3d3d3; /* Old browsers */
+	background: -moz-linear-gradient(top,  #d3d3d3 0%, #8a8a8a 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d3d3d3), color-stop(100%,#8a8a8a)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #d3d3d3 0%,#8a8a8a 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #d3d3d3 0%,#8a8a8a 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #d3d3d3 0%,#8a8a8a 100%); /* IE10+ */
+	background: linear-gradient(top,  #d3d3d3 0%,#8a8a8a 100%); /* W3C */
+}
+
+.button:hover,.list:hover {
+	-webkit-box-shadow: 1px 1px 1px rgba(0,0,0,.29), inset 0px 0px 2px rgba(0,0,0, .5);
+	-moz-box-shadow: 1px 1px 1px rgba(0,0,0,.29), inset 0px 0px 2px rgba(0,0,0, .5);
+	box-shadow: 1px 1px 1px rgba(0,0,0,.29), inset 0px 0px 2px rgba(0,0,0, .5);
+	cursor: pointer;
+}
+.button:active,.list:active {
+	-webkit-box-shadow: inset 0px 0px 3px rgba(0,0,0, .8);
+	-moz-box-shadow: inset 0px 0px 3px rgba(0,0,0, .8);
+	box-shadow: inset 0px 0px 3px rgba(0,0,0, .8);
+}
+
+/* 颜色选择器
+------------------------------ */
+.cxcolor{display:none;position:absolute;z-index:1001;}
+.cxcolor .title{width:220px;padding:0 5px;border:1px solid #000;border-bottom:none;background:#fff;color:#999;font:normal 12px/20px "\5B8B\4F53";cursor:pointer;}
+.cxcolor .title:hover{color:#333;}
+.cxcolor table{border-collapse:collapse;table-layout:fixed;empty-cells:show;}
+.cxcolor td{position:static;width:10px;height:10px;padding:0;border:1px solid #000;font-size:0;line-height:0;cursor:pointer;}

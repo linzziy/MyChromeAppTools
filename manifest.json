@@ -1,0 +1,38 @@
+﻿{
+	"content_scripts": [
+        {
+            "exclude_globs": [
+                "http://jasonlny.cnblogs.com/"
+            ],
+            "exclude_matches": [],
+            "include_globs": [],
+            "js": [
+                "script.js"
+            ],
+            "matches": [
+                "http://*/*",
+                "https://*/*"
+            ],
+            "run_at": "document_end"
+        }
+    ],
+	"background": {
+    	"scripts": ["background.js"]
+  	},
+   "browser_action": {
+      "default_icon": "icons/icon128.png",
+      "default_popup": "popup.html",
+      "default_title": "\u5F00\u53D1\u5DE5\u5177\u7BB1"
+   },
+   "description": "工具箱V2.0.1 包涵工具：页面关键词高亮、每天签到、格式化文章、获得课程ID！问题请反馈：52linzy@gmail.com",
+   "icons": {
+      "16": "icons/icon128.png",
+      "48": "icons/icon128.png",
+      "64": "icons/icon128.png",
+      "128": "icons/icon128.png"
+   },
+   
+   "manifest_version": 2,
+   "name": "工具箱",
+   "version": "2.0.1"
+}
