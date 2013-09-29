@@ -17,16 +17,18 @@
 
 		var mybody = document.getElementById('main');
 		
-		var keys = msg.mykey;
-		var isSignin = msg.flag;
-		if(keys != null && keys != "")
+		var keys = msg.mykey;		//关键字
+		var isSignin = msg.flag;	//是否开启自动登录
+		var onweek = msg.onweek;	//登录的时间，以周为单位
+		if(keys && keys !== "")
 		{
-			HighlightKeyWords(document, keys); 
+			HighlightKeyWords(document, keys);
 		}
-		if(mybody != null)
-		{
-			mybody = mybody.contentDocument
-		}
+		// if(mybody)	//去用些功能
+		// {
+		//  alert('no');
+		//  mybody = mybody.contentDocument;
+		// }
 		
 		var recode = new Date(msg.recode);
 		//var nowStr = now.getFullYear()+"-"+now.getDay()+"-"+now.getDate();
@@ -34,7 +36,7 @@
 
 		if(now.getDate() != recode.getDate())
 		{
-			if(isSignin)	//需要开启
+			if(isSignin && in_array(onweek, now.getDay()))	//需要开启且在设定日期之内
 			{
 				InitWebSite();
 			}
@@ -60,6 +62,12 @@ function SetSingIn()
 	});
 }
 
+function in_array(arr, num){
+	for (var i = 0; i < arr.length; i++) {
+		if (arr[i] == num) return true;
+	}
+	return false;
+}
 
 
 function DateCompare(a, b) {

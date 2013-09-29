@@ -3,8 +3,10 @@ if(!window.localStorage){
 	alert("你浏览器不支持些脚本！");
 }else{
 	var isSignIn = 1;
+	var onweek = [0,1,2,3,4,5,6];
+
 	keys = window.localStorage.getItem('keys');
-	if(keys == "" || keys == null)
+	if(keys === undefined || keys === "")
 	{
 		keys = "";
 		window.localStorage.setItem('keys',keys);
@@ -17,9 +19,10 @@ if(!window.localStorage){
 			if (msg.fun == "get")
 			{
 				port.postMessage({
-					mykey: window.localStorage.getItem('keys'),
-					recode:window.localStorage.getItem('recode'),
-					flag:isSignIn
+					'mykey': window.localStorage.getItem('keys'),
+					'recode': window.localStorage.getItem('recode'),
+					'flag': isSignIn,
+					'onweek':onweek
 				});
 			}
 			else if(msg.fun == "Now")
@@ -37,7 +40,7 @@ if(!window.localStorage){
 				var pattern = /\|$/i;
 				if(pattern.test(tempStr))
 				{
-					tempStr = tempStr.substring(0, tempStr.length-1)
+					tempStr = tempStr.substring(0, tempStr.length-1);
 				}
 				
 				window.localStorage.setItem('keys',tempStr);
