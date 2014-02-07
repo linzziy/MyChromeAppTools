@@ -46,7 +46,41 @@
 	
 	SingIn();
 
+	//Test~~
+	//Test();
 })();
+
+
+
+function Test(){
+	//setInterval('Jsonp_xm()', 5000);
+	Jsonp_xm();
+}
+
+function Jsonp_xm(){
+	var t = new Date().getTime();
+	var url = 'http://tc.hd.xiaomi.com/hdget?callback=hdcontrol&_='+t;
+
+	script = document.createElement('script');
+	script.type = 'text/javascript';
+	script.src = url;
+	document.getElementsByTagName("head")[0x0].appendChild(script);
+}
+
+function hdcontrol(e){
+	//alert("jsonp");
+	console.info(e);
+}
+
+
+
+
+
+
+
+
+
+
 
 function SetSingIn()
 {
